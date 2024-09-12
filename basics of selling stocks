@@ -1,7 +1,9 @@
-stock_price: int = int(input("Price of one stock?: "))
-stock_amount: int = int(input("amount of stocks?: "))
+def unknown_vars():
+    costs: int = int(input("transaction cost?: "))
+    stock_price: int = int(input("Price of one stock?: "))
+    stock_amount: int = int(input("amount of stocks?: "))
+
 total_stock: int = stock_amount * stock_price
-costs: int = int(input("transaction cost?: "))
 total_price: int = total_stock + 2 * costs
 
 percentage_gain: float = float(input("Percent profitable gain?: "))
