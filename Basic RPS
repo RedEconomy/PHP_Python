@@ -1,0 +1,27 @@
+import random
+rps = ['rock', 'paper', 'scissors']
+
+
+def random_rps():
+    return random.choice(rps)
+
+
+def your_rps():
+    your_choice: str = input('rps?: ').lower()
+    if your_choice in rps:
+        return your_choice
+    else:
+        print('Please choose a valid rps')
+        your_rps()
+
+
+the_list = [random_rps(), your_rps()]
+if the_list[0] == the_list[1]:
+    print(f'You both chose {the_list[0]}, it is a draw')
+elif the_list[0] == 'paper' and the_list[1] == 'rock' or the_list[0] == 'rock' and the_list[1] == 'scissors' or the_list[0] == 'scissors' and the_list[1] == 'paper':
+    print(f'You lost with {the_list[1]}')
+else:
+    print(f'You won with {the_list[1]}')
+
+
+print(the_list)
