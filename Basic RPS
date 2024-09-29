@@ -1,9 +1,8 @@
 import random
-rps = ['rock', 'paper', 'scissors']
 
 
 def random_rps():
-    return random.choice(rps)
+    return random.choice('rock', 'paper', 'scissors')
 
 
 def your_rps():
