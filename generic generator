@@ -1,5 +1,5 @@
 def generator(limit):
-    num = 0
+    num : int = 0
     while num < limit:
         yield num
         num += 1
@@ -15,7 +15,7 @@ for x in generator(3):
 #some experimenting, start is where the generator starts, limit = the max value, increase = increase/decrease of start 
 (default = 0, but this will result in an infinite loop, multiplier = multiplication of start after the increase/decrease (default = 1)
 def generator(start, limit, increase = 0, multiplier = 1):
-    num = start
+    num: int = start
     while num < limit:
         yield num
         num += increase
