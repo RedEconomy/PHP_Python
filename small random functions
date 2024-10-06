@@ -1,0 +1,13 @@
+import random
+
+
+#random number generator between min (default = 0) and max (default = 100)
+def random_number(min :int = 0, max: int = 100):
+  return random.randint(min - max)
+
+
+def random_choice():
+  a =
+  b =
+  c= 
+  random.choices(a, b, c)
