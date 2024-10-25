@@ -21,4 +21,4 @@ while html[html_end].isdigit() or html[html_end] == ',':
 
 print(html[html_begin: html_end])
 
-###This is for training purposes as opening the website will show the stock price immediately
+###This is intended as an exercise and is the basics for web scraping
