@@ -1,0 +1,24 @@
+from urllib.request import urlopen
+
+#Scraping from a page, in this case it is searching for the stock price of the company stock 'ING'
+page = urlopen("https://www.iex.nl/Aandeel-Koers/11773/ING-Groep.aspx")
+html_bytes = page.read()
+
+#reading as an utf-8
+html = html_bytes.decode("utf-8")
+
+#After print(html) and using 'ctrl + f' for the stock price of the day, it was determined that the stock price will always appear after the following item in the .find()
+html_end = html.find('LastPrice" data-decimals="3" data-alternative="replace">') + len('LastPrice" data-decimals="3" data-alternative="replace">')
+
+#creating a while loop to determine the length of the stock price
+html_begin = html_end
+count = 0
+
+while html[html_end].isdigit() or html[html_end] == ',':
+    count += 1
+    html_end = html_end + 1
+
+
+print(html[html_begin: html_end])
+
+###This is for training purposes as opening the website will show the stock price immediately
