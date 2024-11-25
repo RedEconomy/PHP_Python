@@ -1,6 +1,6 @@
-def generator(limit):
+def generator(lim):
     num : int = 0
-    while num < limit:
+    while num < lim:
         yield num
         num += 1
 
