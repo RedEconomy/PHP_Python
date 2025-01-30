@@ -1,1 +1,1 @@
-PHP_Python is a collection of Python/PHP coding 
+PHP_Python is a collection of Python coding 
